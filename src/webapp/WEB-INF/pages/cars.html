@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>cars</title>
+    <style>
+        /* Стили для таблицы */
+        table {
+            border-collapse: collapse;
+            width: 100%;
+        }
+
+        /* Стили для заголовков таблицы */
+        th {
+            border: 1px solid #000000;
+            text-align: left;
+            padding: 8px;
+        }
+
+        /* Стили для ячеек таблицы */
+        td {
+            border: 1px solid #000000;
+            text-align: left;
+            padding: 8px;
+        }
+
+        /* Каждая вторая строка после главной с серым фоном */
+        tr:nth-child(even) {
+            background-color: #b2afaf;
+        }
+
+    </style>
+</head>
+<body>
+
+
+<table>
+    <thead>
+    <tr>
+        <th>Car model</th>
+        <th>Car color</th>
+        <th>Car age</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="car : ${cars4display}">
+        <td th:text="${car.mark}"></td>
+        <td th:text="${car.color}"></td>
+        <td th:text="${car.age}"></td>
+    </tr>
+    </tbody>
+</table>
+
+
+</body>
+</html>
